@@ -1,0 +1,79 @@
+<%- include('./partials/header') %>
+<!-- <link rel="stylesheet" href="userstyle.css"> -->
+
+
+<div class="containe">
+  <div class="row">
+    <div class="col-lg-12">
+      <!-- add_user.ejs -->
+      <h3 style="color:greenyellow">edit_user(<%= user.name %>)</h3>
+      <div class="form-container">
+        <form action="/update/<%= user._id %>" method="POST" enctype="multipart/form-data">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" value="<%= user.name %>" required>
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" value="<%= user.email %>" required>
+      
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone" value="<%= user.phone %>" required>
+      
+          <label for="image">Select Image:</label>
+          <input type="file" id="image" name="image" accept="image/*">
+          <img src="/<%= user.image %>" width="100" class="img-thumbnail mt-1">
+          <input type="hidden" name="oldimage" value="<%= user.image %>">
+      
+          <input type="submit" value="edituser">
+        </form>
+      </div>
+  
+    </div>
+  </div>
+</div>
+<style>
+  /* Styling for the form */
+  .form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+  }
+
+  .form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container input[type="file"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .form-container input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .form-container input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+</style>
+
+
+<%- include('./partials/footer') %>
+
+   

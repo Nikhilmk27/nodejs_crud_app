@@ -1,0 +1,19 @@
+
+      /* Custom styles for your navbar */
+      .navbar {
+        background-color:rgba(147, 147, 189, 0.836); /* Set the background color to black */
+      }
+    
+      .navbar-nav .nav-link {
+        color: white !important; /* Set link color to white */
+      }
+    
+      .navbar-nav .nav-link:hover {
+        color: lightgray !important; /* Change link color on hover */
+      }
+    
+      .navbar-nav .nav-link .fas {
+        margin-right: 5px;
+        color: white; /* Set icon color to white */
+      }
+   
