@@ -1,2 +1,2 @@
 # nodejs_crud_app
-a nodejs crud app with image upload using multer
+this is a nodejs crud app with image upload using multer the dtabase used in this app is mongodb
