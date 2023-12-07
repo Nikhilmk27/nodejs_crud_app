@@ -20,7 +20,8 @@ app.use(express.json())
 app.use(session({
     secret:'my scret key',
     saveUninitialized:true,
-    resave:false
+    resave:false,
+   
 }))
 
 // This middleware snippet effectively transfers the value stored in 
